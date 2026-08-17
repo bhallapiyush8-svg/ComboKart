@@ -1,0 +1,20 @@
+from django.urls import path
+
+from .views import create_order, order_status
+
+
+urlpatterns = [
+
+    path(
+        "create/",
+        create_order,
+        name="create_order"
+    ),
+
+    path(
+        "<int:order_id>/",
+        order_status,
+        name="order_status"
+    ),
+
+]
