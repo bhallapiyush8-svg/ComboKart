@@ -24,10 +24,6 @@ body{
     color:#171717;
 }
 
-/* =========================
-   VARIABLES
-========================= */
-
 :root{
     --orange:#ff5b22;
     --orange-dark:#e9470e;
@@ -40,9 +36,7 @@ body{
     --white:#ffffff;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 .navbar{
     height:75px;
@@ -77,7 +71,6 @@ body{
     text-decoration:none;
     color:#333;
     font-weight:600;
-    transition:.2s;
 }
 
 .nav-links a:hover{
@@ -87,7 +80,7 @@ body{
 .nav-actions{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:10px;
 }
 
 .login-btn{
@@ -96,6 +89,16 @@ body{
     padding:10px 18px;
     border-radius:25px;
     cursor:pointer;
+}
+
+.location-button{
+    border:none;
+    background:var(--orange);
+    color:white;
+    padding:11px 16px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
 .cart-button{
@@ -115,8 +118,6 @@ body{
     margin-left:4px;
 }
 
-/* MOBILE MENU */
-
 .menu-button{
     display:none;
     border:none;
@@ -125,9 +126,7 @@ body{
     cursor:pointer;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
     min-height:650px;
@@ -206,9 +205,7 @@ body{
     font-weight:bold;
 }
 
-/* =========================
-   QUICK STATS
-========================= */
+/* STATS */
 
 .stats{
     display:grid;
@@ -241,9 +238,7 @@ body{
     color:#777;
 }
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
+/* SECTIONS */
 
 .section{
     padding:90px 7%;
@@ -251,7 +246,7 @@ body{
 
 .section-title{
     text-align:center;
-    max-width:700px;
+    max-width:750px;
     margin:0 auto 50px;
 }
 
@@ -266,9 +261,7 @@ body{
     line-height:1.6;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
 
 .about{
     background:white;
@@ -321,9 +314,7 @@ body{
     font-size:14px;
 }
 
-/* =========================
-   HOW IT WORKS
-========================= */
+/* STEPS */
 
 .steps{
     display:grid;
@@ -359,12 +350,161 @@ body{
     line-height:1.6;
 }
 
-/* =========================
-   MENU
-========================= */
+/* LOCATION */
+
+.location{
+    background:white;
+}
+
+.location-box{
+    background:#fff7f2;
+    border-radius:25px;
+    padding:30px;
+    border:1px solid #f0ded5;
+    margin-bottom:35px;
+}
+
+.location-status{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.location-status-left{
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.location-icon-big{
+    width:55px;
+    height:55px;
+    display:grid;
+    place-items:center;
+    background:white;
+    border-radius:50%;
+    font-size:28px;
+}
+
+.location-status h3{
+    margin-bottom:5px;
+}
+
+.location-status p{
+    color:#777;
+}
+
+.find-location-btn{
+    border:none;
+    background:var(--orange);
+    color:white;
+    padding:13px 20px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.restaurant-title{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.restaurant-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.restaurant-card{
+    background:white;
+    border:1px solid #eee;
+    border-radius:20px;
+    padding:22px;
+    transition:.3s;
+}
+
+.restaurant-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.restaurant-card.selected{
+    border:2px solid var(--orange);
+}
+
+.restaurant-card-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.restaurant-card h3{
+    margin-bottom:7px;
+}
+
+.restaurant-distance{
+    background:#fff3ec;
+    color:var(--orange);
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.restaurant-card p{
+    color:#777;
+    font-size:14px;
+    line-height:1.5;
+    margin:10px 0;
+}
+
+.restaurant-address{
+    color:#888;
+    font-size:13px;
+}
+
+.restaurant-menu-btn{
+    margin-top:15px;
+    width:100%;
+    border:none;
+    background:var(--dark);
+    color:white;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.restaurant-menu-btn:hover{
+    background:var(--orange);
+}
+
+/* MENU */
 
 .menu-section{
     background:#fff4ed;
+}
+
+.selected-location-banner{
+    max-width:900px;
+    margin:0 auto 25px;
+    background:white;
+    border:1px solid #f0ddd4;
+    border-radius:18px;
+    padding:18px 22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.selected-location-banner strong{
+    color:var(--orange);
 }
 
 .menu-controls{
@@ -429,10 +569,38 @@ body{
     margin-bottom:10px;
 }
 
+.distance-small{
+    color:var(--green);
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
 .food-description{
     color:#777;
     font-size:13px;
     margin-bottom:12px;
+}
+
+.portion-select-wrap{
+    margin:12px 0;
+}
+
+.portion-select-wrap label{
+    display:block;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.portion-select{
+    width:100%;
+    padding:10px 12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    background:#fff;
+    font:inherit;
+    cursor:pointer;
 }
 
 .food-bottom{
@@ -461,8 +629,6 @@ body{
     accent-color:var(--orange);
 }
 
-/* ADD ALL BAR */
-
 .bulk-bar{
     display:flex;
     align-items:center;
@@ -488,19 +654,7 @@ body{
     font-weight:bold;
 }
 
-/* =========================
-   CENTRE
-========================= */
-
-.location{
-    background:white;
-}
-
-.location-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:35px;
-}
+/* MAP */
 
 .map{
     min-height:420px;
@@ -511,50 +665,111 @@ body{
 
 .map iframe{
     width:100%;
-    height:100%;
-    min-height:420px;
+    height:420px;
     border:0;
 }
 
-.location-card{
-    padding:35px;
-    background:#fff7f2;
+/* TRACKING */
+
+.tracking-card{
+    background:white;
+    border:1px solid #eee;
     border-radius:22px;
+    padding:30px;
+    max-width:700px;
+    margin:30px auto;
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
 }
 
-.location-card h3{
-    font-size:30px;
-    margin-bottom:15px;
+.tracking-card h3{
+    font-size:26px;
+    margin-bottom:8px
 }
 
-.location-item{
-    display:flex;
-    gap:15px;
-    padding:20px 0;
-    border-bottom:1px solid #eaded7;
-}
-
-.location-item:last-child{
-    border:none;
-}
-
-.location-icon{
-    font-size:25px;
-}
-
-.location-item strong{
-    display:block;
-    margin-bottom:4px;
-}
-
-.location-item span{
+.tracking-muted{
     color:#777;
-    line-height:1.5;
+    margin-bottom:22px
 }
 
-/* =========================
-   CART DRAWER
-========================= */
+.tracking-status{
+    display:inline-block;
+    background:#fff3ec;
+    color:var(--orange);
+    padding:8px 14px;
+    border-radius:20px;
+    font-weight:800;
+    text-transform:capitalize;
+    margin-bottom:25px;
+}
+
+.tracking-steps{
+    display:grid;
+    gap:12px;
+}
+
+.tracking-step{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:14px;
+    border-radius:14px;
+    background:#fafafa;
+    color:#999;
+}
+
+.tracking-step.done{
+    color:var(--green);
+    background:#f1fbf5;
+}
+
+.tracking-step.current{
+    color:var(--orange);
+    background:#fff6f0;
+    font-weight:800;
+}
+
+.tracking-dot{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:#e9e9e9;
+    flex:none;
+}
+
+.tracking-step.done .tracking-dot,
+.tracking-step.current .tracking-dot{
+    background:currentColor;
+    color:white;
+}
+
+.tracking-actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:22px;
+}
+
+.tracking-input{
+    flex:1;
+    min-width:180px;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.track-btn{
+    border:none;
+    background:var(--orange);
+    color:white;
+    padding:13px 20px;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer
+}
+
+/* CART */
 
 .cart-overlay{
     position:fixed;
@@ -596,10 +811,6 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-}
-
-.cart-header h2{
-    font-size:22px;
 }
 
 .close-cart{
@@ -649,6 +860,7 @@ body{
 
 .cart-item-info small{
     color:#999;
+    display:block;
 }
 
 .item-price{
@@ -716,9 +928,7 @@ body{
     cursor:pointer;
 }
 
-/* =========================
-   CHECKOUT MODAL
-========================= */
+/* MODAL */
 
 .modal-overlay{
     position:fixed;
@@ -805,9 +1015,7 @@ body{
     cursor:pointer;
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 
 .contact{
     background:var(--dark);
@@ -866,9 +1074,7 @@ body{
     height:120px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
     background:#0c0c0c;
@@ -910,9 +1116,7 @@ footer a:hover{
     color:#666;
 }
 
-/* =========================
-   TOAST
-========================= */
+/* TOAST */
 
 .toast{
     position:fixed;
@@ -934,9 +1138,7 @@ footer a:hover{
     transform:translate(-50%,0);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media(max-width:950px){
 
@@ -948,6 +1150,10 @@ footer a:hover{
         display:block;
     }
 
+    .location-button{
+        display:none;
+    }
+
     .stats{
         grid-template-columns:1fr 1fr;
     }
@@ -957,7 +1163,6 @@ footer a:hover{
     }
 
     .about-grid,
-    .location-grid,
     .contact-grid{
         grid-template-columns:1fr;
     }
@@ -966,7 +1171,8 @@ footer a:hover{
         grid-template-columns:1fr;
     }
 
-    .food-grid{
+    .food-grid,
+    .restaurant-grid{
         grid-template-columns:1fr 1fr;
     }
 
@@ -1008,10 +1214,6 @@ footer a:hover{
         grid-template-columns:1fr 1fr;
     }
 
-    .stat{
-        border-bottom:1px solid #eee;
-    }
-
     .menu-controls{
         flex-direction:column;
     }
@@ -1020,7 +1222,8 @@ footer a:hover{
         height:45px;
     }
 
-    .food-grid{
+    .food-grid,
+    .restaurant-grid{
         grid-template-columns:1fr;
     }
 
@@ -1037,50 +1240,14 @@ footer a:hover{
     .footer-grid{
         grid-template-columns:1fr;
     }
-
 }
-
-
-
-/* =========================
-   API MENU PORTION SELECTOR
-========================= */
-
-.portion-select-wrap{
-    margin:12px 0 4px;
-}
-
-.portion-select-wrap label{
-    display:block;
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:6px;
-}
-
-.portion-select{
-    width:100%;
-    padding:10px 12px;
-    border:1px solid #ddd;
-    border-radius:10px;
-    background:#fff;
-    font:inherit;
-    cursor:pointer;
-}
-
-
-/* ORDER TRACKING */
-.tracking-card{background:white;border:1px solid #eee;border-radius:22px;padding:30px;max-width:700px;margin:30px auto;box-shadow:0 12px 30px rgba(0,0,0,.06);}
-.tracking-card h3{font-size:26px;margin-bottom:8px}.tracking-muted{color:#777;margin-bottom:22px}.tracking-status{display:inline-block;background:#fff3ec;color:var(--orange);padding:8px 14px;border-radius:20px;font-weight:800;text-transform:capitalize;margin-bottom:25px}.tracking-steps{display:grid;gap:12px}.tracking-step{display:flex;align-items:center;gap:14px;padding:14px;border-radius:14px;background:#fafafa;color:#999}.tracking-step.done{color:var(--green);background:#f1fbf5}.tracking-step.current{color:var(--orange);background:#fff6f0;font-weight:800}.tracking-dot{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#e9e9e9;flex:none}.tracking-step.done .tracking-dot,.tracking-step.current .tracking-dot{background:currentColor;color:white}.tracking-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.tracking-input{flex:1;min-width:180px;padding:13px;border:1px solid #ddd;border-radius:10px}.track-btn{border:none;background:var(--orange);color:white;padding:13px 20px;border-radius:10px;font-weight:bold;cursor:pointer}
 
 </style>
 </head>
 
 <body>
 
-
-<!-- =========================
-     NAVBAR
-========================= -->
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -1089,38 +1256,28 @@ footer a:hover{
     </div>
 
     <ul class="nav-links">
-
-        <li>
-            <a href="#home">Home</a>
-        </li>
-
-        <li>
-            <a href="#about">About</a>
-        </li>
-
-        <li>
-            <a href="#menu">Order</a>
-        </li>
-
-        <li>
-            <a href="#location">Our Centre</a>
-        </li>
-
-        <li>
-            <a href="#contact">Connect</a>
-        </li>
-
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#location">Restaurants</a></li>
+        <li><a href="#menu">Order</a></li>
+        <li><a href="#tracking">Track</a></li>
+        <li><a href="#contact">Connect</a></li>
     </ul>
 
     <div class="nav-actions">
 
-        <button class="login-btn" onclick="showToast('Login feature coming soon!')">
+        <button class="login-btn"
+                onclick="showToast('Login feature coming soon!')">
             Login
         </button>
 
-        <button class="cart-button" onclick="document.getElementById('tracking').scrollIntoView({behavior:'smooth'})">📦 Track</button>
+        <button class="location-button"
+                onclick="findNearbyRestaurants()">
+            📍 Find Nearby
+        </button>
 
-        <button class="cart-button" onclick="openCart()">
+        <button class="cart-button"
+                onclick="openCart()">
             🛒 Cart
             <span class="cart-number" id="cartCount">0</span>
         </button>
@@ -1134,9 +1291,7 @@ footer a:hover{
 </nav>
 
 
-<!-- =========================
-     HOME
-========================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -1152,24 +1307,21 @@ footer a:hover{
         </h1>
 
         <p>
-            Pick your favourite dishes from different restaurants,
-            choose smaller portions and combine everything into
-            one delicious personalized platter.
+            Find restaurants within 5 km of your location,
+            choose dishes from different restaurants,
+            select smaller portions and build your own
+            personalized platter.
         </p>
 
         <div class="hero-buttons">
 
-            <button
-                class="primary-btn"
-                onclick="document.getElementById('menu').scrollIntoView()"
-            >
-                🛒 Start Ordering
+            <button class="primary-btn"
+                    onclick="findNearbyRestaurants()">
+                📍 Find Restaurants Near Me
             </button>
 
-            <button
-                class="secondary-btn"
-                onclick="document.getElementById('about').scrollIntoView()"
-            >
+            <button class="secondary-btn"
+                    onclick="document.getElementById('about').scrollIntoView()">
                 Discover Combo Kart
             </button>
 
@@ -1180,20 +1332,23 @@ footer a:hover{
 </section>
 
 
-<!-- =========================
-     STATS
-========================= -->
+<!-- STATS -->
 
 <div class="stats">
 
     <div class="stat">
-        <strong>20+</strong>
+        <strong id="restaurantCountStat">0</strong>
+        <span>Restaurants Nearby</span>
+    </div>
+
+    <div class="stat">
+        <strong id="foodCountStat">0</strong>
         <span>Food Choices</span>
     </div>
 
     <div class="stat">
-        <strong>10+</strong>
-        <span>Restaurant Partners</span>
+        <strong>5 KM</strong>
+        <span>Restaurant Radius</span>
     </div>
 
     <div class="stat">
@@ -1201,17 +1356,10 @@ footer a:hover{
         <span>Custom Platter</span>
     </div>
 
-    <div class="stat">
-        <strong>100%</strong>
-        <span>Your Choice</span>
-    </div>
-
 </div>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ABOUT -->
 
 <section class="section about" id="about">
 
@@ -1230,37 +1378,37 @@ footer a:hover{
             </h2>
 
             <p>
-                At Combo Kart, we believe you shouldn't have to
-                order a huge portion of one dish just because
-                you want to taste it.
+                At Combo Kart, you shouldn't have to choose
+                between your favourite restaurants.
             </p>
 
             <p>
-                We let you select smaller portions from different
-                restaurants and combine them into one complete
-                food experience.
+                Allow us to access your location and we'll
+                find restaurants within a 5 km radius.
+                You can then mix dishes from those restaurants
+                into one personalized platter.
             </p>
 
             <div class="features">
 
                 <div class="feature">
+                    <strong>📍 5 KM Discovery</strong>
+                    <span>Find restaurants around you.</span>
+                </div>
+
+                <div class="feature">
                     <strong>🍔 More Variety</strong>
-                    <span>Multiple cuisines in one order.</span>
+                    <span>Multiple restaurants in one platter.</span>
                 </div>
 
                 <div class="feature">
                     <strong>💰 Better Value</strong>
-                    <span>Pay for portions you actually want.</span>
+                    <span>Choose portions you actually want.</span>
                 </div>
 
                 <div class="feature">
                     <strong>🧩 Your Combo</strong>
-                    <span>Create a platter your way.</span>
-                </div>
-
-                <div class="feature">
-                    <strong>🛵 Easy Delivery</strong>
-                    <span>One simple ordering experience.</span>
+                    <span>Create your platter your way.</span>
                 </div>
 
             </div>
@@ -1272,9 +1420,7 @@ footer a:hover{
 </section>
 
 
-<!-- =========================
-     HOW IT WORKS
-========================= -->
+<!-- HOW IT WORKS -->
 
 <section class="section">
 
@@ -1283,7 +1429,7 @@ footer a:hover{
         <h2>How Combo Kart Works</h2>
 
         <p>
-            Create your perfect platter in just a few clicks.
+            Your location powers the restaurant discovery.
         </p>
 
     </div>
@@ -1293,14 +1439,14 @@ footer a:hover{
         <div class="step">
 
             <div class="step-icon">
-                🔎
+                📍
             </div>
 
-            <h3>1. Explore</h3>
+            <h3>1. Share Location</h3>
 
             <p>
-                Browse dishes from different restaurants
-                and cuisines.
+                Allow location access so Combo Kart can
+                find nearby restaurants.
             </p>
 
         </div>
@@ -1314,8 +1460,8 @@ footer a:hover{
             <h3>2. Build</h3>
 
             <p>
-                Select multiple dishes and create
-                your customized platter.
+                Select dishes and portions from multiple
+                restaurants within 5 km.
             </p>
 
         </div>
@@ -1340,20 +1486,123 @@ footer a:hover{
 </section>
 
 
-<!-- =========================
-     MENU
-========================= -->
+<!-- LOCATION / RESTAURANTS -->
+
+<section class="section location" id="location">
+
+    <div class="section-title">
+
+        <h2>📍 Restaurants Near You</h2>
+
+        <p>
+            Combo Kart finds active restaurants within
+            a 5 km radius of your current location.
+        </p>
+
+    </div>
+
+
+    <div class="location-box">
+
+        <div class="location-status">
+
+            <div class="location-status-left">
+
+                <div class="location-icon-big">
+                    📍
+                </div>
+
+                <div>
+
+                    <h3 id="locationTitle">
+                        Location not selected
+                    </h3>
+
+                    <p id="locationSubtitle">
+                        Allow location access to discover
+                        restaurants within 5 km.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <button class="find-location-btn"
+                    onclick="findNearbyRestaurants()">
+                📍 Use My Location
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <h3 class="restaurant-title">
+        🍽️ Nearby Restaurants
+    </h3>
+
+
+    <div class="restaurant-grid"
+         id="restaurantGrid">
+
+        <div class="restaurant-card"
+             style="grid-column:1/-1;text-align:center;padding:50px;">
+
+            <div style="font-size:45px;">
+                📍
+            </div>
+
+            <h3>
+                Find restaurants near you
+            </h3>
+
+            <p>
+                Click "Use My Location" to start.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MENU -->
 
 <section class="section menu-section" id="menu">
 
     <div class="section-title">
 
-        <h2>Build Your Platter</h2>
+        <h2>🧩 Build Your Platter</h2>
 
         <p>
-            Select as many dishes as you want.
-            Add them all to your cart together.
+            Choose dishes from different nearby restaurants
+            and combine them into one order.
         </p>
+
+    </div>
+
+
+    <div class="selected-location-banner">
+
+        <div>
+            <strong id="menuRestaurantMessage">
+                📍 Find nearby restaurants first
+            </strong>
+
+            <br>
+
+            <span id="menuRestaurantSub"
+                  style="color:#777;">
+                Your menu will appear here after location
+                detection.
+            </span>
+        </div>
+
+        <button class="find-location-btn"
+                onclick="findNearbyRestaurants()">
+            Refresh Nearby
+        </button>
 
     </div>
 
@@ -1374,55 +1623,40 @@ footer a:hover{
             onchange="filterFood()"
         >
 
-            <option value="all">
-                All Categories
-            </option>
-
-            <option value="indian">
-                Indian
-            </option>
-
-            <option value="fastfood">
-                Fast Food
-            </option>
-
-            <option value="asian">
-                Asian
-            </option>
-
-            <option value="dessert">
-                Desserts
-            </option>
-
-            <option value="healthy">
-                Healthy
-            </option>
+            <option value="all">All Categories</option>
+            <option value="indian">Indian</option>
+            <option value="fastfood">Fast Food</option>
+            <option value="asian">Asian</option>
+            <option value="dessert">Desserts</option>
+            <option value="healthy">Healthy</option>
 
         </select>
 
     </div>
 
 
-    <div class="food-grid" id="foodGrid">
+    <div class="food-grid"
+         id="foodGrid">
 
-        <!--
-            Menu cards are loaded from the Django API:
-            /api/menu/foods/
+        <div class="food-card"
+             style="grid-column:1/-1;text-align:center;padding:50px;">
 
-            The existing design/classes are kept so the
-            search, category filter and cart continue to work.
-        -->
+            <div style="font-size:45px;">
+                📍
+            </div>
 
-        <div class="food-card" style="grid-column:1/-1; text-align:center; padding:50px;">
-            <div style="font-size:42px;">🍽️</div>
-            <h3>Loading today's menu...</h3>
-            <p>Getting fresh dishes from ComboKart.</p>
+            <h3>
+                Find restaurants first
+            </h3>
+
+            <p>
+                We'll show their menus here.
+            </p>
+
         </div>
 
     </div>
 
-
-    <!-- BULK ADD -->
 
     <div class="bulk-bar">
 
@@ -1436,15 +1670,14 @@ footer a:hover{
             <br>
 
             <span>
-                Select multiple dishes and add them together.
+                Select dishes from different restaurants.
             </span>
 
         </div>
 
         <button
             class="add-selected"
-            onclick="addSelectedItems()"
-        >
+            onclick="addSelectedItems()">
             + Add Selected to Cart
         </button>
 
@@ -1453,139 +1686,80 @@ footer a:hover{
 </section>
 
 
-<!-- =========================
-     LOCATION
-========================= -->
+<!-- MAP -->
 
-<section class="section location" id="location">
+<section class="section location">
 
     <div class="section-title">
 
-        <h2>📍 Our Centre</h2>
+        <h2>🗺️ Your Nearby Area</h2>
 
         <p>
-            Visit our Combo Kart centre or use it as
-            our food preparation and coordination hub.
+            Your detected location is used only to find
+            restaurants around you.
         </p>
 
     </div>
 
+    <div class="map">
 
-    <div class="location-grid">
+        <iframe
+            id="mapFrame"
+            src="https://www.google.com/maps?q=New+Delhi,India&output=embed"
+            loading="lazy">
+        </iframe>
 
-        <div class="map">
+    </div>
 
-            <!--
-              CHANGE THE GOOGLE MAP URL BELOW
-              TO YOUR ACTUAL CENTRE LOCATION.
-            -->
+</section>
 
-            <iframe
-                src="https://www.google.com/maps?q=New+Delhi,India&output=embed"
-                loading="lazy"
+
+<!-- ORDER TRACKING -->
+
+<section class="section" id="tracking">
+
+    <div class="section-title">
+
+        <h2>📦 Track Your Order</h2>
+
+        <p>
+            Enter your order number to see the latest
+            status of your Combo Kart platter.
+        </p>
+
+    </div>
+
+    <div class="tracking-card">
+
+        <div class="tracking-actions">
+
+            <input
+                id="trackingOrderId"
+                class="tracking-input"
+                type="number"
+                min="1"
+                placeholder="Enter Order ID, e.g. 3"
             >
-            </iframe>
-
-        </div>
-
-
-        <div class="location-card">
-
-            <h3>Combo Kart Centre</h3>
-
-            <div class="location-item">
-
-                <div class="location-icon">
-                    📍
-                </div>
-
-                <div>
-
-                    <strong>Address</strong>
-
-                    <span>
-                        Your Combo Kart Centre<br>
-                        New Delhi, India
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="location-item">
-
-                <div class="location-icon">
-                    🕐
-                </div>
-
-                <div>
-
-                    <strong>Operating Hours</strong>
-
-                    <span>
-                        Monday – Sunday<br>
-                        10:00 AM – 11:00 PM
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="location-item">
-
-                <div class="location-icon">
-                    🛵
-                </div>
-
-                <div>
-
-                    <strong>Delivery Area</strong>
-
-                    <span>
-                        We currently serve selected areas
-                        around our centre.
-                    </span>
-
-                </div>
-
-            </div>
-
 
             <button
-                class="primary-btn"
-                onclick="openDirections()"
-            >
-                📍 Get Directions
+                class="track-btn"
+                onclick="trackOrder()">
+                Track Order
             </button>
 
         </div>
 
+        <div id="trackingResult"
+             style="margin-top:22px;color:#777;text-align:center;">
+            No order selected.
+        </div>
+
     </div>
 
 </section>
 
 
-
-<!-- ORDER TRACKING -->
-<section class="section" id="tracking">
-  <div class="section-title">
-    <h2>📦 Track Your Order</h2>
-    <p>Enter your order number to see the latest status of your ComboKart platter.</p>
-  </div>
-  <div class="tracking-card">
-    <div class="tracking-actions">
-      <input id="trackingOrderId" class="tracking-input" type="number" min="1" placeholder="Enter Order ID, e.g. 3">
-      <button class="track-btn" onclick="trackOrder()">Track Order</button>
-    </div>
-    <div id="trackingResult" style="margin-top:22px;color:#777;text-align:center;">No order selected.</div>
-  </div>
-</section>
-
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- CONTACT -->
 
 <section class="section contact" id="contact">
 
@@ -1600,45 +1774,32 @@ footer a:hover{
             <p>
                 Have a question, want to partner with Combo Kart,
                 or want to become one of our restaurant partners?
-                Send us a message.
             </p>
-
 
             <div class="contact-info">
 
                 <div class="contact-row">
-
                     <div>📞</div>
-
                     <div>
                         <strong>Phone</strong><br>
                         <span>+91 98765 43210</span>
                     </div>
-
                 </div>
 
-
                 <div class="contact-row">
-
                     <div>✉️</div>
-
                     <div>
                         <strong>Email</strong><br>
                         <span>hello@combokart.com</span>
                     </div>
-
                 </div>
 
-
                 <div class="contact-row">
-
                     <div>📍</div>
-
                     <div>
                         <strong>Centre</strong><br>
                         <span>New Delhi, India</span>
                     </div>
-
                 </div>
 
             </div>
@@ -1668,8 +1829,7 @@ footer a:hover{
             <button
                 class="primary-btn"
                 style="width:100%"
-                onclick="sendMessage()"
-            >
+                onclick="sendMessage()">
                 Send Message
             </button>
 
@@ -1680,9 +1840,7 @@ footer a:hover{
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1702,18 +1860,22 @@ footer a:hover{
 
         </div>
 
-
         <div>
 
             <h3>Explore</h3>
 
             <ul>
+
                 <li>
                     <a href="#home">Home</a>
                 </li>
 
                 <li>
                     <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#location">Restaurants</a>
                 </li>
 
                 <li>
@@ -1724,7 +1886,6 @@ footer a:hover{
 
         </div>
 
-
         <div>
 
             <h3>Company</h3>
@@ -1732,15 +1893,11 @@ footer a:hover{
             <ul>
 
                 <li>
-                    <a href="#location">
-                        Our Centre
-                    </a>
+                    <a href="#tracking">Track Order</a>
                 </li>
 
                 <li>
-                    <a href="#contact">
-                        Contact
-                    </a>
+                    <a href="#contact">Contact</a>
                 </li>
 
                 <li>
@@ -1751,52 +1908,41 @@ footer a:hover{
 
         </div>
 
-
         <div>
 
             <h3>Social</h3>
 
             <ul>
-
                 <li>Instagram</li>
                 <li>Facebook</li>
                 <li>LinkedIn</li>
-
             </ul>
 
         </div>
 
     </div>
 
-
     <div class="copyright">
-
         © 2026 Combo Kart. All rights reserved.
-
     </div>
 
 </footer>
 
 
-<!-- =========================
-     CART OVERLAY
-========================= -->
+<!-- CART OVERLAY -->
 
 <div
     class="cart-overlay"
     id="cartOverlay"
-    onclick="closeCart()"
-></div>
+    onclick="closeCart()">
+</div>
 
 
-<!-- =========================
-     CART DRAWER
-========================= -->
+<!-- CART -->
 
 <aside
     class="cart-drawer"
-    id="cartDrawer"
->
+    id="cartDrawer">
 
     <div class="cart-header">
 
@@ -1806,71 +1952,42 @@ footer a:hover{
 
         <button
             class="close-cart"
-            onclick="closeCart()"
-        >
+            onclick="closeCart()">
             ×
         </button>
 
     </div>
 
-
     <div
         class="cart-items"
-        id="cartItems"
-    >
+        id="cartItems">
     </div>
-
 
     <div class="cart-summary">
 
         <div class="summary-row">
-
             <span>Food subtotal</span>
-
-            <strong id="subtotal">
-                ₹0
-            </strong>
-
+            <strong id="subtotal">₹0</strong>
         </div>
 
-
         <div class="summary-row">
-
             <span>Combo packing</span>
-
-            <strong>
-                ₹20
-            </strong>
-
+            <strong>₹20</strong>
         </div>
-
 
         <div class="summary-row">
-
             <span>Delivery</span>
-
-            <strong id="delivery">
-                ₹40
-            </strong>
-
+            <strong id="delivery">₹40</strong>
         </div>
-
 
         <div class="summary-total">
-
             <span>Total</span>
-
-            <span id="total">
-                ₹60
-            </span>
-
+            <span id="total">₹60</span>
         </div>
-
 
         <button
             class="checkout-btn"
-            onclick="openCheckout()"
-        >
+            onclick="openCheckout()">
             Proceed to Checkout →
         </button>
 
@@ -1879,14 +1996,11 @@ footer a:hover{
 </aside>
 
 
-<!-- =========================
-     CHECKOUT MODAL
-========================= -->
+<!-- CHECKOUT -->
 
 <div
     class="modal-overlay"
-    id="checkoutModal"
->
+    id="checkoutModal">
 
     <div class="modal">
 
@@ -1898,12 +2012,9 @@ footer a:hover{
             Just a few details and your platter is ready.
         </p>
 
-
         <div class="form-group">
 
-            <label>
-                Full Name
-            </label>
+            <label>Full Name</label>
 
             <input
                 id="orderName"
@@ -1913,12 +2024,9 @@ footer a:hover{
 
         </div>
 
-
         <div class="form-group">
 
-            <label>
-                Phone Number
-            </label>
+            <label>Phone Number</label>
 
             <input
                 id="orderPhone"
@@ -1928,12 +2036,9 @@ footer a:hover{
 
         </div>
 
-
         <div class="form-group">
 
-            <label>
-                Delivery Address
-            </label>
+            <label>Delivery Address</label>
 
             <textarea
                 id="orderAddress"
@@ -1942,44 +2047,29 @@ footer a:hover{
 
         </div>
 
-
         <div class="form-group">
 
-            <label>
-                Payment Method
-            </label>
+            <label>Payment Method</label>
 
             <select id="paymentMethod">
 
-                <option>
-                    Cash on Delivery
-                </option>
-
-                <option>
-                    UPI
-                </option>
-
-                <option>
-                    Credit / Debit Card
-                </option>
+                <option>Cash on Delivery</option>
+                <option>UPI</option>
+                <option>Credit / Debit Card</option>
 
             </select>
 
         </div>
 
-
         <button
             class="place-order"
-            onclick="placeOrder()"
-        >
+            onclick="placeOrder()">
             🚀 Place Order
         </button>
 
-
         <button
             class="cancel"
-            onclick="closeCheckout()"
-        >
+            onclick="closeCheckout()">
             Cancel
         </button>
 
@@ -1988,37 +2078,27 @@ footer a:hover{
 </div>
 
 
-<!-- =========================
-     TOAST
-========================= -->
+<!-- TOAST -->
 
 <div
     class="toast"
-    id="toast"
->
+    id="toast">
 </div>
 
 
 <script>
 
-/* =========================================
-   COMBO KART CART SYSTEM
-========================================= */
+/* =====================================================
+   GLOBAL DATA
+===================================================== */
 
-
-/*
-   Cart is stored in localStorage.
-   This means refreshing the page will NOT
-   immediately delete the user's cart.
-*/
+let nearbyRestaurants = [];
+let nearbyRestaurantIds = [];
+let nearbyRestaurantDistances = {};
 
 let cart =
-    JSON.parse(
-        localStorage.getItem("comboKartCart")
-    ) || [];
+    JSON.parse(localStorage.getItem("comboKartCart")) || [];
 
-
-// Keep older localStorage carts usable after the menu upgrade.
 cart = cart.map(item => ({
     foodId: item.foodId || null,
     portionId: item.portionId || null,
@@ -2030,10 +2110,15 @@ cart = cart.map(item => ({
     quantity: Number(item.quantity) || 1
 }));
 
+let userLatitude = null;
+let userLongitude = null;
 
-/* =========================================
+let trackingTimer = null;
+
+
+/* =====================================================
    SAVE CART
-========================================= */
+===================================================== */
 
 function saveCart(){
 
@@ -2045,366 +2130,1133 @@ function saveCart(){
 }
 
 
-/* =========================================
-   ADD ONE ITEM
-========================================= */
+/* =====================================================
+   LOCATION
+===================================================== */
 
-function addToCart(item){
+function findNearbyRestaurants(){
 
-    const existing = cart.find(x =>
-        item.portionId
-            ? Number(x.portionId) === Number(item.portionId)
-            : x.name === item.name
-    );
-
-    if(existing){
-
-        existing.quantity++;
-
-    }else{
-
-        cart.push({
-
-            foodId:item.foodId || null,
-
-            portionId:item.portionId || null,
-
-            name:item.name,
-
-            portionName:item.portionName || "",
-
-            restaurant:item.restaurant,
-
-            price:Number(item.price),
-
-            image:item.image || "",
-
-            quantity:1
-
-        });
-
-    }
-
-    saveCart();
-    updateCart();
-
-    showToast(
-        item.name +
-        (item.portionName ? " (" + item.portionName + ")" : "") +
-        " added to your platter!"
-    );
-
-}
-
-
-/* =========================================
-   ADD MANY ITEMS AT ONCE
-========================================= */
-
-function addSelectedItems(){
-
-    const selected =
-        document.querySelectorAll(
-            ".food-checkbox:checked"
-        );
-
-    if(selected.length === 0){
+    if(!navigator.geolocation){
 
         showToast(
-            "Select some dishes first!"
+            "Your browser does not support location."
         );
 
         return;
-
     }
 
-    selected.forEach(box => {
+    showToast(
+        "📍 Getting your location..."
+    );
 
-        const card = box.closest(".food-card");
-        const portionSelect =
-            card ? card.querySelector(".portion-select") : null;
-        const selectedPortion =
-            portionSelect && portionSelect.options.length
-                ? portionSelect.options[portionSelect.selectedIndex]
-                : null;
+    navigator.geolocation.getCurrentPosition(
 
-        addToCart({
+        function(position){
 
-            foodId:box.dataset.foodId,
+            userLatitude =
+                position.coords.latitude;
 
-            portionId:
-                selectedPortion
-                    ? selectedPortion.value
-                    : box.dataset.portionId,
+            userLongitude =
+                position.coords.longitude;
 
-            name:box.dataset.name,
+            loadNearbyRestaurants();
 
-            portionName:
-                selectedPortion
-                    ? selectedPortion.dataset.portionName
-                    : box.dataset.portionName,
+        },
 
-            restaurant:box.dataset.restaurant,
+        function(error){
 
-            price:
-                selectedPortion
-                    ? selectedPortion.dataset.price
-                    : box.dataset.price,
+            console.error(error);
 
-            image:box.dataset.image
+            showToast(
+                "Location permission was denied."
+            );
 
-        });
+            document.getElementById(
+                "locationTitle"
+            ).innerText =
+                "Location permission needed";
 
-        box.checked=false;
+            document.getElementById(
+                "locationSubtitle"
+            ).innerText =
+                "Please allow location access and try again.";
 
-    });
+        },
 
-    updateSelectedCount();
-    openCart();
+        {
+            enableHighAccuracy:true,
+            timeout:10000,
+            maximumAge:0
+        }
+
+    );
 
 }
 
-/* =========================================
-   UPDATE CART
-========================================= */
 
-function updateCart(){
+/* =====================================================
+   LOAD RESTAURANTS WITHIN 5 KM
+===================================================== */
 
-    const cartContainer =
-        document.getElementById("cartItems");
+async function loadNearbyRestaurants(){
+
+    const restaurantGrid =
+        document.getElementById(
+            "restaurantGrid"
+        );
+
+    restaurantGrid.innerHTML = `
+
+        <div
+            class="restaurant-card"
+            style="grid-column:1/-1;text-align:center;padding:50px;"
+        >
+
+            <div style="font-size:45px;">
+                🔎
+            </div>
+
+            <h3>
+                Finding nearby restaurants...
+            </h3>
+
+            <p>
+                Searching within 5 km of your location.
+            </p>
+
+        </div>
+
+    `;
+
+    try{
+
+        const url =
+            `/api/restaurants/?latitude=${encodeURIComponent(userLatitude)}&longitude=${encodeURIComponent(userLongitude)}`;
+
+        const response =
+            await fetch(url);
+
+        if(!response.ok){
+
+            throw new Error(
+                "Restaurant API returned " +
+                response.status
+            );
+
+        }
+
+        const restaurants =
+            await response.json();
+
+        nearbyRestaurants =
+            Array.isArray(restaurants)
+                ? restaurants
+                : [];
+
+        nearbyRestaurantIds =
+            nearbyRestaurants.map(
+                restaurant =>
+                    Number(restaurant.id)
+            );
+
+        nearbyRestaurantDistances = {};
+
+        nearbyRestaurants.forEach(
+            restaurant => {
+
+                nearbyRestaurantDistances[
+                    restaurant.id
+                ] =
+                    restaurant.distance_km;
+
+            }
+        );
 
 
-    const cartCount =
-        document.getElementById("cartCount");
+        /* LOCATION TEXT */
+
+        document.getElementById(
+            "locationTitle"
+        ).innerText =
+            "📍 Location detected";
+
+        document.getElementById(
+            "locationSubtitle"
+        ).innerText =
+            `${nearbyRestaurants.length} active restaurant(s) found within 5 km.`;
+
+        document.getElementById(
+            "restaurantCountStat"
+        ).innerText =
+            nearbyRestaurants.length;
 
 
-    let totalItems=0;
+        /* MAP */
 
-    let subtotal=0;
-
-
-    cart.forEach(item => {
-
-        totalItems += item.quantity;
-
-        subtotal +=
-            item.price * item.quantity;
-
-    });
+        document.getElementById(
+            "mapFrame"
+        ).src =
+            `https://www.google.com/maps?q=${userLatitude},${userLongitude}&z=14&output=embed`;
 
 
-    cartCount.innerText =
-        totalItems;
+        renderRestaurants();
 
+        await loadNearbyMenus();
 
-    /* EMPTY CART */
+        document.getElementById(
+            "location"
+        ).scrollIntoView({
+            behavior:"smooth"
+        });
 
-    if(cart.length===0){
+    }catch(error){
 
-        cartContainer.innerHTML=`
+        console.error(
+            "Restaurant error:",
+            error
+        );
 
-            <div class="empty">
+        restaurantGrid.innerHTML = `
 
-                <div style="font-size:50px">
-                    🧺
+            <div
+                class="restaurant-card"
+                style="grid-column:1/-1;text-align:center;padding:50px;"
+            >
+
+                <div style="font-size:45px;">
+                    ⚠️
                 </div>
 
-                <h3>Your platter is empty</h3>
+                <h3>
+                    Couldn't find restaurants
+                </h3>
 
                 <p>
-                    Select some delicious food
-                    to get started.
+                    ${escapeHtml(error.message)}
                 </p>
 
             </div>
 
         `;
 
-    }else{
+        showToast(
+            "Couldn't load nearby restaurants."
+        );
 
-        cartContainer.innerHTML =
-            cart.map(
-                (item,index) => `
+    }
 
-                <div class="cart-item">
+}
 
-                    <img
-                        class="cart-item-image"
-                        src="${item.image}"
+
+/* =====================================================
+   RENDER RESTAURANTS
+===================================================== */
+
+function renderRestaurants(){
+
+    const restaurantGrid =
+        document.getElementById(
+            "restaurantGrid"
+        );
+
+    if(nearbyRestaurants.length === 0){
+
+        restaurantGrid.innerHTML = `
+
+            <div
+                class="restaurant-card"
+                style="grid-column:1/-1;text-align:center;padding:50px;"
+            >
+
+                <div style="font-size:45px;">
+                    😔
+                </div>
+
+                <h3>
+                    No restaurants within 5 km
+                </h3>
+
+                <p>
+                    Try again from another location.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    restaurantGrid.innerHTML =
+        nearbyRestaurants.map(
+            restaurant => {
+
+                const distance =
+                    restaurant.distance_km !== null &&
+                    restaurant.distance_km !== undefined
+                        ? restaurant.distance_km
+                        : "?";
+
+                return `
+
+                    <div
+                        class="restaurant-card"
+                        id="restaurant-card-${restaurant.id}"
                     >
 
-                    <div class="cart-item-info">
+                        <div class="restaurant-card-top">
 
-                        <h4>
-                            ${item.name}
-                        </h4>
+                            <div>
 
-                        ${item.portionName ? `<small>Portion: ${item.portionName}</small>` : ""}
+                                <h3>
+                                    ${escapeHtml(
+                                        restaurant.name
+                                    )}
+                                </h3>
 
-                        <small>
-                            ${item.restaurant}
-                        </small>
+                            </div>
 
-                        <div class="item-price">
-                            ₹${item.price}
+                            <span class="restaurant-distance">
+                                ${distance} km
+                            </span>
+
                         </div>
 
-                        <div class="quantity-control">
+                        <p>
+                            ${escapeHtml(
+                                restaurant.description ||
+                                "Nearby restaurant on Combo Kart."
+                            )}
+                        </p>
 
-                            <button
-                                onclick="changeQuantity(${index},-1)"
-                            >
-                                −
-                            </button>
+                        <div class="restaurant-address">
 
-                            <strong>
-                                ${item.quantity}
-                            </strong>
-
-                            <button
-                                onclick="changeQuantity(${index},1)"
-                            >
-                                +
-                            </button>
+                            📍
+                            ${escapeHtml(
+                                restaurant.address ||
+                                "Address unavailable"
+                            )}
 
                         </div>
 
                         <button
-                            class="remove"
-                            onclick="removeItem(${index})"
+                            class="restaurant-menu-btn"
+                            onclick="showRestaurantMenu(${restaurant.id})"
                         >
-                            Remove
+                            🍽️ View Menu
                         </button>
 
                     </div>
 
+                `;
+
+            }
+        ).join("");
+
+}
+
+
+/* =====================================================
+   LOAD MENUS FROM NEARBY RESTAURANTS
+===================================================== */
+
+async function loadNearbyMenus(){
+
+    const foodGrid =
+        document.getElementById(
+            "foodGrid"
+        );
+
+    if(nearbyRestaurantIds.length === 0){
+
+        foodGrid.innerHTML = `
+
+            <div
+                class="food-card"
+                style="grid-column:1/-1;text-align:center;padding:50px;"
+            >
+
+                <div style="font-size:45px;">
+                    🍽️
                 </div>
 
-            `
-            ).join("");
+                <h3>
+                    No nearby restaurant menus
+                </h3>
+
+                <p>
+                    Find restaurants first.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
 
     }
 
 
-    document.getElementById(
-        "subtotal"
-    ).innerText =
-        "₹"+subtotal;
+    foodGrid.innerHTML = `
+
+        <div
+            class="food-card"
+            style="grid-column:1/-1;text-align:center;padding:50px;"
+        >
+
+            <div style="font-size:45px;">
+                🍽️
+            </div>
+
+            <h3>
+                Loading nearby menus...
+            </h3>
+
+            <p>
+                Getting dishes from your nearby restaurants.
+            </p>
+
+        </div>
+
+    `;
+
+
+    try{
+
+        /*
+         * Your Django menu API supports:
+         *
+         * /api/menu/foods/?restaurant=ID
+         *
+         * So we request the menu for every restaurant
+         * returned by the 5 km location API.
+         */
+
+        const requests =
+            nearbyRestaurantIds.map(
+                async restaurantId => {
+
+                    const response =
+                        await fetch(
+                            `/api/menu/foods/?restaurant=${restaurantId}`
+                        );
+
+                    if(!response.ok){
+
+                        throw new Error(
+                            `Menu API failed for restaurant ${restaurantId}`
+                        );
+
+                    }
+
+                    return response.json();
+
+                }
+            );
+
+
+        const menuArrays =
+            await Promise.all(requests);
+
+
+        let foods = [];
+
+        menuArrays.forEach(
+            menu => {
+
+                if(Array.isArray(menu)){
+                    foods.push(...menu);
+                }
+
+            }
+        );
+
+
+        /*
+         * Remove accidental duplicates.
+         */
+
+        const uniqueFoods =
+            new Map();
+
+        foods.forEach(
+            food => {
+
+                uniqueFoods.set(
+                    food.id,
+                    food
+                );
+
+            }
+        );
+
+        foods =
+            Array.from(
+                uniqueFoods.values()
+            );
+
+
+        document.getElementById(
+            "foodCountStat"
+        ).innerText =
+            foods.length;
+
+
+        document.getElementById(
+            "menuRestaurantMessage"
+        ).innerText =
+            `🍽️ ${nearbyRestaurants.length} nearby restaurants`;
+
+        document.getElementById(
+            "menuRestaurantSub"
+        ).innerText =
+            `${foods.length} dishes available within your 5 km area.`;
+
+
+        renderFoods(foods);
+
+
+        console.log(
+            "ComboKart nearby restaurants:",
+            nearbyRestaurants
+        );
+
+        console.log(
+            "ComboKart nearby foods:",
+            foods
+        );
+
+    }catch(error){
+
+        console.error(
+            "Menu loading error:",
+            error
+        );
+
+        foodGrid.innerHTML = `
+
+            <div
+                class="food-card"
+                style="grid-column:1/-1;text-align:center;padding:50px;"
+            >
+
+                <div style="font-size:45px;">
+                    ⚠️
+                </div>
+
+                <h3>
+                    Couldn't load the nearby menu
+                </h3>
+
+                <p>
+                    ${escapeHtml(
+                        error.message
+                    )}
+                </p>
+
+            </div>
+
+        `;
+
+        showToast(
+            "Couldn't load nearby menus."
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   RENDER FOOD
+===================================================== */
+
+function renderFoods(foods){
+
+    const foodGrid =
+        document.getElementById(
+            "foodGrid"
+        );
+
+
+    if(!foods || foods.length === 0){
+
+        foodGrid.innerHTML = `
+
+            <div
+                class="food-card"
+                style="grid-column:1/-1;text-align:center;padding:50px;"
+            >
+
+                <div style="font-size:45px;">
+                    🍽️
+                </div>
+
+                <h3>
+                    No active menu
+                </h3>
+
+                <p>
+                    The nearby restaurants don't have
+                    available dishes right now.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    foodGrid.innerHTML =
+        foods.map(
+            food => {
+
+                const category =
+                    String(
+                        food.category || ""
+                    )
+                    .toLowerCase()
+                    .replace(
+                        "fast food",
+                        "fastfood"
+                    )
+                    .replace(
+                        "desserts",
+                        "dessert"
+                    );
+
+
+                const image =
+                    food.image ||
+                    "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=85";
+
+
+                const portions =
+                    Array.isArray(food.portions)
+                        ? food.portions.filter(
+                            portion =>
+                                portion &&
+                                portion.is_active !== false
+                        )
+                        : [];
+
+
+                const firstPortion =
+                    portions[0];
+
+
+                const portionOptions =
+                    portions.length
+
+                    ?
+
+                    portions.map(
+                        portion => `
+
+                            <option
+                                value="${portion.id}"
+                                data-price="${Number(portion.price)}"
+                                data-portion-name="${escapeHtml(
+                                    portion.name
+                                )}"
+                            >
+
+                                ${escapeHtml(
+                                    portion.name
+                                )}
+                                —
+                                ₹${Number(
+                                    portion.price
+                                )}
+
+                            </option>
+
+                        `
+                    ).join("")
+
+                    :
+
+                    `
+
+                        <option
+                            value=""
+                            data-price="0"
+                            data-portion-name=""
+                        >
+                            Unavailable
+                        </option>
+
+                    `;
+
+
+                const price =
+                    firstPortion
+                        ? Number(
+                            firstPortion.price
+                        )
+                        : 0;
+
+
+                const portionName =
+                    firstPortion
+                        ? firstPortion.name
+                        : "";
+
+
+                const distance =
+                    nearbyRestaurantDistances[
+                        food.restaurant_id
+                    ];
+
+
+                return `
+
+                    <div
+                        class="food-card"
+                        data-name="${escapeHtml(
+                            String(
+                                food.name || ""
+                            ).toLowerCase()
+                        )}"
+                        data-category="${category}"
+                    >
+
+                        <img
+                            class="food-image"
+                            src="${escapeHtml(
+                                image
+                            )}"
+                            alt="${escapeHtml(
+                                food.name ||
+                                "Food item"
+                            )}"
+                            onerror="
+                                this.onerror=null;
+                                this.src='https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=85';
+                            "
+                        >
+
+                        <div class="food-body">
+
+                            <h3>
+                                ${escapeHtml(
+                                    food.name ||
+                                    "Unnamed dish"
+                                )}
+                            </h3>
+
+                            <div class="restaurant">
+                                🍽️
+                                ${escapeHtml(
+                                    food.restaurant ||
+                                    "Restaurant"
+                                )}
+                            </div>
+
+                            ${
+                                distance !== undefined
+                                ?
+                                `
+                                <div class="distance-small">
+                                    📍 ${distance} km from you
+                                </div>
+                                `
+                                :
+                                ""
+                            }
+
+                            <div class="food-description">
+                                ${escapeHtml(
+                                    food.description ||
+                                    "Delicious food from Combo Kart."
+                                )}
+                            </div>
+
+                            <div class="portion-select-wrap">
+
+                                <label>
+                                    Choose portion
+                                </label>
+
+                                <select
+                                    class="portion-select"
+                                >
+
+                                    ${portionOptions}
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="food-bottom">
+
+                                <span
+                                    class="price"
+                                    data-card-price
+                                >
+                                    ₹${price}
+                                </span>
+
+
+                                <label
+                                    class="select-food"
+                                >
+
+                                    <input
+                                        type="checkbox"
+                                        class="food-checkbox"
+                                        data-food-id="${food.id}"
+                                        data-portion-id="${
+                                            firstPortion
+                                                ? firstPortion.id
+                                                : ""
+                                        }"
+                                        data-portion-name="${escapeHtml(
+                                            portionName
+                                        )}"
+                                        data-name="${escapeHtml(
+                                            food.name ||
+                                            "Unnamed dish"
+                                        )}"
+                                        data-restaurant="${escapeHtml(
+                                            food.restaurant ||
+                                            "Restaurant"
+                                        )}"
+                                        data-price="${price}"
+                                        data-image="${escapeHtml(
+                                            image
+                                        )}"
+                                        ${
+                                            portions.length
+                                                ? ""
+                                                : "disabled"
+                                        }
+                                    >
+
+                                    ${
+                                        portions.length
+                                            ? "Select"
+                                            : "Unavailable"
+                                    }
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+            }
+        ).join("");
 
 
     /*
-       Example delivery logic:
-       Free delivery if food subtotal >= ₹500.
-    */
+     * When portion changes, update checkbox/cart data.
+     */
 
-    const delivery =
-        subtotal >= 500 ? 0 : 40;
+    foodGrid
+        .querySelectorAll(
+            ".portion-select"
+        )
+        .forEach(
+            select => {
+
+                select.addEventListener(
+                    "change",
+                    function(){
+
+                        const card =
+                            this.closest(
+                                ".food-card"
+                            );
+
+                        const option =
+                            this.options[
+                                this.selectedIndex
+                            ];
+
+                        const checkbox =
+                            card.querySelector(
+                                ".food-checkbox"
+                            );
+
+                        const price =
+                            card.querySelector(
+                                "[data-card-price]"
+                            );
 
 
-    document.getElementById(
-        "delivery"
-    ).innerText =
-        delivery === 0
-        ? "FREE"
-        : "₹"+delivery;
+                        if(
+                            !option ||
+                            !checkbox
+                        ){
+                            return;
+                        }
 
 
-    const total =
-        subtotal +
-        (cart.length > 0 ? 20 : 0) +
-        delivery;
+                        checkbox.dataset.portionId =
+                            option.value;
+
+                        checkbox.dataset.portionName =
+                            option.dataset.portionName ||
+                            "";
+
+                        checkbox.dataset.price =
+                            option.dataset.price ||
+                            "0";
 
 
-    document.getElementById(
-        "total"
-    ).innerText =
-        "₹"+total;
+                        if(price){
+
+                            price.innerText =
+                                "₹" +
+                                (
+                                    option.dataset.price ||
+                                    "0"
+                                );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+    updateSelectedCount();
+
+    filterFood();
 
 }
 
 
-/* =========================================
-   QUANTITY
-========================================= */
+/* =====================================================
+   SHOW PARTICULAR RESTAURANT MENU
+===================================================== */
 
-function changeQuantity(index,change){
+async function showRestaurantMenu(
+    restaurantId
+){
 
-    cart[index].quantity += change;
+    const restaurant =
+        nearbyRestaurants.find(
+            r =>
+                Number(r.id) ===
+                Number(restaurantId)
+        );
 
 
-    if(cart[index].quantity <= 0){
-
-        cart.splice(index,1);
-
+    if(!restaurant){
+        return;
     }
 
 
-    saveCart();
+    document.getElementById(
+        "menuRestaurantMessage"
+    ).innerText =
+        `🍽️ ${restaurant.name}`;
 
-    updateCart();
+
+    document.getElementById(
+        "menuRestaurantSub"
+    ).innerText =
+        `Showing menu from ${restaurant.name}.`;
+
+
+    document.getElementById(
+        "menu"
+    ).scrollIntoView({
+        behavior:"smooth"
+    });
+
+
+    const foodGrid =
+        document.getElementById(
+            "foodGrid"
+        );
+
+
+    foodGrid.innerHTML = `
+
+        <div
+            class="food-card"
+            style="grid-column:1/-1;text-align:center;padding:50px;"
+        >
+
+            <div style="font-size:45px;">
+                🍽️
+            </div>
+
+            <h3>
+                Loading ${escapeHtml(
+                    restaurant.name
+                )}...
+            </h3>
+
+        </div>
+
+    `;
+
+
+    try{
+
+        const response =
+            await fetch(
+                `/api/menu/foods/?restaurant=${restaurantId}`
+            );
+
+
+        if(!response.ok){
+
+            throw new Error(
+                "Unable to load restaurant menu."
+            );
+
+        }
+
+
+        const foods =
+            await response.json();
+
+
+        document.getElementById(
+            "foodCountStat"
+        ).innerText =
+            foods.length;
+
+
+        renderFoods(
+            foods.map(
+                food => ({
+                    ...food,
+                    restaurant_id:
+                        restaurantId
+                })
+            )
+        );
+
+
+    }catch(error){
+
+        console.error(error);
+
+        showToast(
+            "Couldn't load this restaurant's menu."
+        );
+
+    }
 
 }
 
 
-/* =========================================
-   REMOVE
-========================================= */
+/* =====================================================
+   SEARCH / FILTER
+===================================================== */
 
-function removeItem(index){
+function filterFood(){
 
-    const removed =
-        cart[index].name;
+    const search =
+        document
+            .getElementById(
+                "searchInput"
+            )
+            .value
+            .toLowerCase();
 
-    cart.splice(index,1);
 
-    saveCart();
+    const category =
+        document
+            .getElementById(
+                "categoryFilter"
+            )
+            .value;
 
-    updateCart();
 
-    showToast(
-        removed+" removed."
-    );
+    document
+        .querySelectorAll(
+            ".food-card"
+        )
+        .forEach(
+            card => {
+
+                if(!card.dataset.name){
+                    return;
+                }
+
+
+                const name =
+                    card.dataset.name;
+
+                const cardCategory =
+                    card.dataset.category;
+
+
+                const matchesSearch =
+                    name.includes(
+                        search
+                    );
+
+
+                const matchesCategory =
+                    category === "all" ||
+                    cardCategory === category;
+
+
+                card.style.display =
+                    matchesSearch &&
+                    matchesCategory
+                        ? "block"
+                        : "none";
+
+            }
+        );
 
 }
 
 
-/* =========================================
-   OPEN CART
-========================================= */
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
 
-function openCart(){
+function escapeHtml(value){
 
-    document
-        .getElementById("cartDrawer")
-        .classList.add("open");
-
-    document
-        .getElementById("cartOverlay")
-        .classList.add("open");
-
-}
-
-
-/* =========================================
-   CLOSE CART
-========================================= */
-
-function closeCart(){
-
-    document
-        .getElementById("cartDrawer")
-        .classList.remove("open");
-
-    document
-        .getElementById("cartOverlay")
-        .classList.remove("open");
+    return String(value)
+        .replaceAll(
+            "&",
+            "&amp;"
+        )
+        .replaceAll(
+            "<",
+            "&lt;"
+        )
+        .replaceAll(
+            ">",
+            "&gt;"
+        )
+        .replaceAll(
+            '"',
+            "&quot;"
+        )
+        .replaceAll(
+            "'",
+            "&#039;"
+        );
 
 }
 
 
-/* =========================================
+/* =====================================================
    SELECTED FOOD COUNT
-========================================= */
+===================================================== */
 
 function updateSelectedCount(){
 
@@ -2423,284 +3275,515 @@ function updateSelectedCount(){
 
 
 document
-    .getElementById("foodGrid")
-    .addEventListener("change", function(event){
+    .getElementById(
+        "foodGrid"
+    )
+    .addEventListener(
+        "change",
+        function(event){
 
-        if(event.target.classList.contains("food-checkbox")){
-            updateSelectedCount();
+            if(
+                event.target.classList.contains(
+                    "food-checkbox"
+                )
+            ){
+
+                updateSelectedCount();
+
+            }
+
         }
+    );
 
-    });
+
+/* =====================================================
+   ADD TO CART
+===================================================== */
+
+function addToCart(item){
+
+    const existing =
+        cart.find(
+            x =>
+
+                item.portionId
+
+                ?
+
+                Number(
+                    x.portionId
+                ) ===
+                Number(
+                    item.portionId
+                )
+
+                :
+
+                x.name ===
+                item.name
+        );
 
 
-/* =========================================
-   LOAD MENU FROM DJANGO API
-========================================= */
+    if(existing){
 
-async function loadMenu(){
+        existing.quantity++;
 
-    const foodGrid =
-        document.getElementById("foodGrid");
+    }else{
 
-    try{
+        cart.push({
 
-        const response =
-            await fetch("/api/menu/foods/");
+            foodId:
+                item.foodId ||
+                null,
 
-        if(!response.ok){
-            throw new Error(
-                "Menu API returned " + response.status
-            );
+            portionId:
+                item.portionId ||
+                null,
+
+            name:
+                item.name,
+
+            portionName:
+                item.portionName ||
+                "",
+
+            restaurant:
+                item.restaurant,
+
+            price:
+                Number(
+                    item.price
+                ),
+
+            image:
+                item.image ||
+                "",
+
+            quantity:1
+
+        });
+
+    }
+
+
+    saveCart();
+
+    updateCart();
+
+    showToast(
+        item.name +
+        (
+            item.portionName
+                ? ` (${item.portionName})`
+                : ""
+        ) +
+        " added!"
+    );
+
+}
+
+
+/* =====================================================
+   ADD SELECTED
+===================================================== */
+
+function addSelectedItems(){
+
+    const selected =
+        document.querySelectorAll(
+            ".food-checkbox:checked"
+        );
+
+
+    if(selected.length === 0){
+
+        showToast(
+            "Select some dishes first!"
+        );
+
+        return;
+
+    }
+
+
+    selected.forEach(
+        box => {
+
+            const card =
+                box.closest(
+                    ".food-card"
+                );
+
+
+            const portionSelect =
+                card
+                    ? card.querySelector(
+                        ".portion-select"
+                    )
+                    : null;
+
+
+            const selectedPortion =
+                portionSelect &&
+                portionSelect.options.length
+
+                    ?
+
+                    portionSelect.options[
+                        portionSelect.selectedIndex
+                    ]
+
+                    :
+
+                    null;
+
+
+            addToCart({
+
+                foodId:
+                    box.dataset.foodId,
+
+                portionId:
+                    selectedPortion
+                        ? selectedPortion.value
+                        : box.dataset.portionId,
+
+                name:
+                    box.dataset.name,
+
+                portionName:
+                    selectedPortion
+                        ? selectedPortion.dataset.portionName
+                        : box.dataset.portionName,
+
+                restaurant:
+                    box.dataset.restaurant,
+
+                price:
+                    selectedPortion
+                        ? selectedPortion.dataset.price
+                        : box.dataset.price,
+
+                image:
+                    box.dataset.image
+
+            });
+
+
+            box.checked =
+                false;
+
         }
+    );
 
-        const foods = await response.json();
 
-        if(!Array.isArray(foods) || foods.length === 0){
+    updateSelectedCount();
 
-            foodGrid.innerHTML = `
-                <div class="food-card" style="grid-column:1/-1; text-align:center; padding:50px;">
-                    <div style="font-size:42px;">🍽️</div>
-                    <h3>No dishes available right now</h3>
-                    <p>Please check back soon.</p>
+    openCart();
+
+}
+
+
+/* =====================================================
+   UPDATE CART
+===================================================== */
+
+function updateCart(){
+
+    const cartContainer =
+        document.getElementById(
+            "cartItems"
+        );
+
+
+    const cartCount =
+        document.getElementById(
+            "cartCount"
+        );
+
+
+    let totalItems = 0;
+
+    let subtotal = 0;
+
+
+    cart.forEach(
+        item => {
+
+            totalItems +=
+                item.quantity;
+
+            subtotal +=
+                item.price *
+                item.quantity;
+
+        }
+    );
+
+
+    cartCount.innerText =
+        totalItems;
+
+
+    if(cart.length === 0){
+
+        cartContainer.innerHTML = `
+
+            <div class="empty">
+
+                <div style="font-size:50px">
+                    🧺
                 </div>
-            `;
 
-            return;
-        }
+                <h3>
+                    Your platter is empty
+                </h3>
 
-        foodGrid.innerHTML = foods.map(food => {
+                <p>
+                    Select some delicious food
+                    to get started.
+                </p>
 
-            const category =
-                String(food.category || "")
-                    .toLowerCase()
-                    .replace("fast food", "fastfood")
-                    .replace("desserts", "dessert");
+            </div>
 
-            const image =
-                food.image ||
-                "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=85";
+        `;
 
-            const portions =
-                Array.isArray(food.portions)
-                    ? food.portions.filter(p => p)
-                    : [];
+    }else{
 
-            const firstPortion = portions[0];
+        cartContainer.innerHTML =
+            cart.map(
+                (item,index) => `
 
-            const portionOptions = portions.length
-                ? portions.map(portion => `
-                    <option
-                        value="${portion.id}"
-                        data-price="${Number(portion.price)}"
-                        data-portion-name="${escapeHtml(portion.name)}"
-                    >
-                        ${escapeHtml(portion.name)} — ₹${Number(portion.price)}
-                    </option>
-                `).join("")
-                : `<option value="" data-price="0" data-portion-name="">Unavailable</option>`;
+                    <div class="cart-item">
 
-            const price = firstPortion
-                ? Number(firstPortion.price)
-                : 0;
+                        <img
+                            class="cart-item-image"
+                            src="${escapeHtml(
+                                item.image
+                            )}"
+                        >
 
-            const portionName = firstPortion
-                ? firstPortion.name
-                : "";
+                        <div class="cart-item-info">
 
-            return `
-                <div
-                    class="food-card"
-                    data-name="${escapeHtml(String(food.name || "").toLowerCase())}"
-                    data-category="${category}"
-                >
+                            <h4>
+                                ${escapeHtml(
+                                    item.name
+                                )}
+                            </h4>
 
-                    <img
-    class="food-image"
-    src="${escapeHtml(image)}"
-    alt="${escapeHtml(food.name || "Food item")}"
-    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=85';"
->
+                            ${
+                                item.portionName
+                                    ?
+                                    `
+                                    <small>
+                                        Portion:
+                                        ${escapeHtml(
+                                            item.portionName
+                                        )}
+                                    </small>
+                                    `
+                                    :
+                                    ""
+                            }
 
-                    <div class="food-body">
+                            <small>
+                                ${escapeHtml(
+                                    item.restaurant
+                                )}
+                            </small>
 
-                        <h3>${escapeHtml(food.name || "Unnamed dish")}</h3>
+                            <div class="item-price">
+                                ₹${item.price}
+                            </div>
 
-                        <div class="restaurant">
-                            🍽️ ${escapeHtml(food.restaurant || "Restaurant")}
-                        </div>
+                            <div class="quantity-control">
 
-                        <div class="food-description">
-                            ${escapeHtml(food.description || "Delicious food from ComboKart.")}
-                        </div>
-
-                        <div class="portion-select-wrap">
-                            <label for="portion-${food.id}">Choose portion</label>
-                            <select
-                                class="portion-select"
-                                id="portion-${food.id}"
-                            >
-                                ${portionOptions}
-                            </select>
-                        </div>
-
-                        <div class="food-bottom">
-
-                            <span class="price" data-card-price>
-                                ₹${price}
-                            </span>
-
-                            <label class="select-food">
-
-                                <input
-                                    type="checkbox"
-                                    class="food-checkbox"
-                                    data-food-id="${food.id}"
-                                    data-portion-id="${firstPortion ? firstPortion.id : ""}"
-                                    data-portion-name="${escapeHtml(portionName)}"
-                                    data-name="${escapeHtml(food.name || "Unnamed dish")}" 
-                                    data-restaurant="${escapeHtml(food.restaurant || "Restaurant")}" 
-                                    data-price="${price}"
-                                    data-image="${escapeHtml(image)}"
-                                    ${portions.length ? "" : "disabled"}
+                                <button
+                                    onclick="changeQuantity(${index},-1)"
                                 >
+                                    −
+                                </button>
 
-                                ${portions.length ? "Select" : "Unavailable"}
+                                <strong>
+                                    ${item.quantity}
+                                </strong>
 
-                            </label>
+                                <button
+                                    onclick="changeQuantity(${index},1)"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                            <button
+                                class="remove"
+                                onclick="removeItem(${index})"
+                            >
+                                Remove
+                            </button>
 
                         </div>
 
                     </div>
 
-                </div>
-            `;
-
-        }).join("");
-
-        // Keep the checkbox data synchronized with the selected portion.
-        foodGrid.querySelectorAll(".portion-select").forEach(select => {
-
-            select.addEventListener("change", function(){
-
-                const card = this.closest(".food-card");
-                const option = this.options[this.selectedIndex];
-                const checkbox = card.querySelector(".food-checkbox");
-                const price = card.querySelector("[data-card-price]");
-
-                if(!option || !checkbox) return;
-
-                checkbox.dataset.portionId = option.value;
-                checkbox.dataset.portionName = option.dataset.portionName || "";
-                checkbox.dataset.price = option.dataset.price || "0";
-
-                if(price){
-                    price.innerText = "₹" + (option.dataset.price || "0");
-                }
-
-            });
-
-        });
-
-        updateSelectedCount();
-        filterFood();
-
-        console.log("ComboKart API menu loaded:", foods);
-
-    }catch(error){
-
-        console.error("ComboKart menu error:", error);
-
-        foodGrid.innerHTML = `
-            <div class="food-card" style="grid-column:1/-1; text-align:center; padding:50px;">
-                <div style="font-size:42px;">⚠️</div>
-                <h3>Couldn't load the live menu</h3>
-                <p>Make sure Django is running, then refresh the page.</p>
-            </div>
-        `;
-
-        showToast("Couldn't load the live menu.");
+                `
+            ).join("");
 
     }
 
+
+    document.getElementById(
+        "subtotal"
+    ).innerText =
+        "₹" +
+        subtotal;
+
+
+    const delivery =
+        subtotal >= 500
+            ? 0
+            : 40;
+
+
+    document.getElementById(
+        "delivery"
+    ).innerText =
+        delivery === 0
+            ? "FREE"
+            : "₹" + delivery;
+
+
+    const total =
+        subtotal +
+        (
+            cart.length > 0
+                ? 20
+                : 0
+        ) +
+        delivery;
+
+
+    document.getElementById(
+        "total"
+    ).innerText =
+        "₹" +
+        total;
+
 }
 
 
-function escapeHtml(value){
+/* =====================================================
+   QUANTITY
+===================================================== */
 
-    return String(value)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
+function changeQuantity(
+    index,
+    change
+){
+
+    cart[index].quantity +=
+        change;
+
+
+    if(
+        cart[index].quantity <= 0
+    ){
+
+        cart.splice(
+            index,
+            1
+        );
+
+    }
+
+
+    saveCart();
+
+    updateCart();
 
 }
 
 
-/* =========================================
-   FOOD SEARCH
-========================================= */
+/* =====================================================
+   REMOVE
+===================================================== */
 
-function filterFood(){
+function removeItem(index){
 
-    const search =
-        document
-            .getElementById("searchInput")
-            .value
-            .toLowerCase();
+    const removed =
+        cart[index].name;
+
+    cart.splice(
+        index,
+        1
+    );
+
+    saveCart();
+
+    updateCart();
+
+    showToast(
+        removed +
+        " removed."
+    );
+
+}
 
 
-    const category =
-        document
-            .getElementById("categoryFilter")
-            .value;
+/* =====================================================
+   CART OPEN/CLOSE
+===================================================== */
 
+function openCart(){
 
     document
-        .querySelectorAll(".food-card")
-        .forEach(card => {
+        .getElementById(
+            "cartDrawer"
+        )
+        .classList.add(
+            "open"
+        );
 
-            const name =
-                card.dataset.name;
-
-            const cardCategory =
-                card.dataset.category;
-
-
-            const matchesSearch =
-                name.includes(search);
-
-
-            const matchesCategory =
-                category === "all" ||
-                cardCategory === category;
-
-
-            if(
-                matchesSearch &&
-                matchesCategory
-            ){
-
-                card.style.display="block";
-
-            }else{
-
-                card.style.display="none";
-
-            }
-
-        });
+    document
+        .getElementById(
+            "cartOverlay"
+        )
+        .classList.add(
+            "open"
+        );
 
 }
 
 
-/* =========================================
+function closeCart(){
+
+    document
+        .getElementById(
+            "cartDrawer"
+        )
+        .classList.remove(
+            "open"
+        );
+
+    document
+        .getElementById(
+            "cartOverlay"
+        )
+        .classList.remove(
+            "open"
+        );
+
+}
+
+
+/* =====================================================
    CHECKOUT
-========================================= */
+===================================================== */
 
 function openCheckout(){
 
-    if(cart.length===0){
+    if(cart.length === 0){
 
         showToast(
             "Your platter is empty!"
@@ -2712,8 +3795,12 @@ function openCheckout(){
 
 
     document
-        .getElementById("checkoutModal")
-        .classList.add("open");
+        .getElementById(
+            "checkoutModal"
+        )
+        .classList.add(
+            "open"
+        );
 
 }
 
@@ -2721,101 +3808,145 @@ function openCheckout(){
 function closeCheckout(){
 
     document
-        .getElementById("checkoutModal")
-        .classList.remove("open");
+        .getElementById(
+            "checkoutModal"
+        )
+        .classList.remove(
+            "open"
+        );
 
 }
 
 
-/* =========================================
+/* =====================================================
    PLACE ORDER
-========================================= */
+===================================================== */
 
 async function placeOrder(){
 
     const name =
         document
-            .getElementById("orderName")
-            .value.trim();
+            .getElementById(
+                "orderName"
+            )
+            .value
+            .trim();
+
 
     const phone =
         document
-            .getElementById("orderPhone")
-            .value.trim();
+            .getElementById(
+                "orderPhone"
+            )
+            .value
+            .trim();
+
 
     const address =
         document
-            .getElementById("orderAddress")
-            .value.trim();
+            .getElementById(
+                "orderAddress"
+            )
+            .value
+            .trim();
+
 
     const paymentMethod =
         document
-            .getElementById("paymentMethod")
+            .getElementById(
+                "paymentMethod"
+            )
             .value;
 
-    if(!name || !phone || !address){
+
+    if(
+        !name ||
+        !phone ||
+        !address
+    ){
 
         showToast(
             "Please fill all delivery details."
         );
 
         return;
+
     }
 
-    if(!cart || cart.length === 0){
+
+    if(
+        !cart ||
+        cart.length === 0
+    ){
 
         showToast(
             "Your platter is empty."
         );
 
         return;
+
     }
 
-    const orderItems = cart.map(item => ({
 
-        portionId:
-            Number(item.portionId),
+    const orderItems =
+        cart.map(
+            item => ({
 
-        quantity:
-            Number(item.quantity)
+                portionId:
+                    Number(
+                        item.portionId
+                    ),
 
-    }));
+                quantity:
+                    Number(
+                        item.quantity
+                    )
+
+            })
+        );
+
 
     try{
 
-        const response = await fetch(
-            "/api/orders/create/",
-            {
-                method: "POST",
+        const response =
+            await fetch(
+                "/api/orders/create/",
+                {
 
-                headers: {
-                    "Content-Type":
-                        "application/json"
-                },
+                    method:"POST",
 
-                body: JSON.stringify({
+                    headers:{
+                        "Content-Type":
+                            "application/json"
+                    },
 
-                    customer_name:
-                        name,
+                    body:
+                        JSON.stringify({
 
-                    phone:
-                        phone,
+                            customer_name:
+                                name,
 
-                    address:
-                        address,
+                            phone:
+                                phone,
 
-                    payment_method:
-                        paymentMethod,
+                            address:
+                                address,
 
-                    items:
-                        orderItems
+                            payment_method:
+                                paymentMethod,
 
-                })
-            }
-        );
+                            items:
+                                orderItems
+
+                        })
+
+                }
+            );
+
 
         const result =
             await response.json();
+
 
         if(!response.ok){
 
@@ -2823,7 +3954,9 @@ async function placeOrder(){
                 result.error ||
                 "Unable to place order."
             );
+
         }
+
 
         alert(
             "🎉 ORDER PLACED!\n\n" +
@@ -2836,12 +3969,18 @@ async function placeOrder(){
             "\n\nYour Combo Kart platter is being prepared."
         );
 
-        localStorage.setItem("comboKartLastOrderId", result.order_id);
-        document.getElementById("trackingOrderId").value = result.order_id;
-        closeCheckout();
-        closeCart();
-        document.getElementById("tracking").scrollIntoView({behavior:"smooth"});
-        trackOrder();
+
+        localStorage.setItem(
+            "comboKartLastOrderId",
+            result.order_id
+        );
+
+
+        document.getElementById(
+            "trackingOrderId"
+        ).value =
+            result.order_id;
+
 
         cart = [];
 
@@ -2852,6 +3991,19 @@ async function placeOrder(){
         closeCheckout();
 
         closeCart();
+
+
+        document
+            .getElementById(
+                "tracking"
+            )
+            .scrollIntoView({
+                behavior:"smooth"
+            });
+
+
+        trackOrder();
+
 
     }catch(error){
 
@@ -2864,108 +4016,365 @@ async function placeOrder(){
             error.message ||
             "Something went wrong."
         );
+
     }
+
 }
 
 
-
-/* =========================================
+/* =====================================================
    ORDER TRACKING
-========================================= */
-let trackingTimer = null;
+===================================================== */
 
 const trackingStages = [
-    ["pending", "Order Placed"],
-    ["confirmed", "Confirmed"],
-    ["preparing", "Preparing"],
-    ["out_for_delivery", "Out for Delivery"],
-    ["delivered", "Delivered"]
+
+    ["pending","Order Placed"],
+
+    ["confirmed","Confirmed"],
+
+    ["preparing","Preparing"],
+
+    ["out_for_delivery","Out for Delivery"],
+
+    ["delivered","Delivered"]
+
 ];
 
+
 function renderTracking(order){
-    const box = document.getElementById("trackingResult");
-    const current = String(order.status || "pending").toLowerCase();
-    const currentIndex = trackingStages.findIndex(s => s[0] === current);
-    const safeIndex = currentIndex >= 0 ? currentIndex : 0;
+
+    const box =
+        document.getElementById(
+            "trackingResult"
+        );
+
+
+    const current =
+        String(
+            order.status ||
+            "pending"
+        ).toLowerCase();
+
+
+    const currentIndex =
+        trackingStages.findIndex(
+            stage =>
+                stage[0] ===
+                current
+        );
+
+
+    const safeIndex =
+        currentIndex >= 0
+            ? currentIndex
+            : 0;
+
 
     box.innerHTML = `
-        <h3>Order #${escapeHtml(order.order_id)}</h3>
-        <p class="tracking-muted">${escapeHtml(order.customer_name || "Customer")} · ₹${escapeHtml(order.total_amount || "0")}</p>
-        <div class="tracking-status">${escapeHtml(current.replaceAll("_", " "))}</div>
-        <div class="tracking-steps">
-            ${trackingStages.map((stage, i) => {
-                const cls = i < safeIndex ? "done" : (i === safeIndex ? "current" : "");
-                const icon = i < safeIndex ? "✓" : (i === safeIndex ? "●" : "○");
-                return `<div class="tracking-step ${cls}"><span class="tracking-dot">${icon}</span><span>${stage[1]}</span></div>`;
-            }).join("")}
+
+        <h3>
+            Order #${escapeHtml(
+                order.order_id
+            )}
+        </h3>
+
+        <p class="tracking-muted">
+            ${escapeHtml(
+                order.customer_name ||
+                "Customer"
+            )}
+            ·
+            ₹${escapeHtml(
+                order.total_amount ||
+                "0"
+            )}
+        </p>
+
+        <div class="tracking-status">
+
+            ${escapeHtml(
+                current.replaceAll(
+                    "_",
+                    " "
+                )
+            )}
+
         </div>
-        <p class="tracking-muted" style="margin-top:20px;margin-bottom:0">Last checked: ${new Date().toLocaleTimeString()}</p>
+
+        <div class="tracking-steps">
+
+            ${
+                trackingStages
+                    .map(
+                        (stage,i) => {
+
+                            const cls =
+                                i <
+                                safeIndex
+
+                                    ? "done"
+
+                                    :
+
+                                    (
+                                        i ===
+                                        safeIndex
+                                            ? "current"
+                                            : ""
+                                    );
+
+
+                            const icon =
+                                i <
+                                safeIndex
+
+                                    ? "✓"
+
+                                    :
+
+                                    (
+                                        i ===
+                                        safeIndex
+                                            ? "●"
+                                            : "○"
+                                    );
+
+
+                            return `
+
+                                <div
+                                    class="tracking-step ${cls}"
+                                >
+
+                                    <span
+                                        class="tracking-dot"
+                                    >
+                                        ${icon}
+                                    </span>
+
+                                    <span>
+                                        ${stage[1]}
+                                    </span>
+
+                                </div>
+
+                            `;
+
+                        }
+                    )
+                    .join("")
+            }
+
+        </div>
+
+        <p
+            class="tracking-muted"
+            style="margin-top:20px;margin-bottom:0"
+        >
+            Last checked:
+            ${new Date().toLocaleTimeString()}
+        </p>
+
     `;
+
 }
+
 
 async function trackOrder(){
-    const input = document.getElementById("trackingOrderId");
-    const box = document.getElementById("trackingResult");
-    const orderId = Number(input.value);
+
+    const input =
+        document.getElementById(
+            "trackingOrderId"
+        );
+
+
+    const box =
+        document.getElementById(
+            "trackingResult"
+        );
+
+
+    const orderId =
+        Number(
+            input.value
+        );
+
 
     if(!orderId){
-        showToast("Enter an Order ID first.");
+
+        showToast(
+            "Enter an Order ID first."
+        );
+
         return;
+
     }
+
 
     try{
-        const response = await fetch(`/api/orders/${orderId}/`);
-        const result = await response.json();
-        if(!response.ok) throw new Error(result.error || "Order not found.");
-        renderTracking(result);
 
-        if(trackingTimer) clearInterval(trackingTimer);
-        trackingTimer = setInterval(() => refreshTracking(orderId), 5000);
+        const response =
+            await fetch(
+                `/api/orders/${orderId}/`
+            );
+
+
+        const result =
+            await response.json();
+
+
+        if(!response.ok){
+
+            throw new Error(
+                result.error ||
+                "Order not found."
+            );
+
+        }
+
+
+        renderTracking(
+            result
+        );
+
+
+        if(trackingTimer){
+
+            clearInterval(
+                trackingTimer
+            );
+
+        }
+
+
+        trackingTimer =
+            setInterval(
+                () =>
+                    refreshTracking(
+                        orderId
+                    ),
+                5000
+            );
+
+
     }catch(error){
-        if(trackingTimer) clearInterval(trackingTimer);
-        box.innerHTML = `<p style="color:#e74c3c;font-weight:bold">${escapeHtml(error.message)}</p>`;
+
+        if(trackingTimer){
+
+            clearInterval(
+                trackingTimer
+            );
+
+        }
+
+
+        box.innerHTML = `
+
+            <p
+                style="
+                    color:#e74c3c;
+                    font-weight:bold
+                "
+            >
+                ${escapeHtml(
+                    error.message
+                )}
+            </p>
+
+        `;
+
     }
+
 }
 
-async function refreshTracking(orderId){
+
+async function refreshTracking(
+    orderId
+){
+
     try{
-        const response = await fetch(`/api/orders/${orderId}/`);
-        const result = await response.json();
-        if(response.ok) renderTracking(result);
+
+        const response =
+            await fetch(
+                `/api/orders/${orderId}/`
+            );
+
+
+        const result =
+            await response.json();
+
+
+        if(response.ok){
+
+            renderTracking(
+                result
+            );
+
+        }
+
     }catch(error){
-        console.error("Tracking refresh error:", error);
+
+        console.error(
+            "Tracking refresh error:",
+            error
+        );
+
     }
+
 }
+
 
 function loadLastOrder(){
-    const lastOrderId = localStorage.getItem("comboKartLastOrderId");
+
+    const lastOrderId =
+        localStorage.getItem(
+            "comboKartLastOrderId"
+        );
+
+
     if(lastOrderId){
-        document.getElementById("trackingOrderId").value = lastOrderId;
+
+        document.getElementById(
+            "trackingOrderId"
+        ).value =
+            lastOrderId;
+
     }
+
 }
 
-/* =========================================
-   CONTACT FORM
-========================================= */
+
+/* =====================================================
+   CONTACT
+===================================================== */
 
 function sendMessage(){
 
     const name =
         document
-            .getElementById("contactName")
-            .value.trim();
+            .getElementById(
+                "contactName"
+            )
+            .value
+            .trim();
 
 
     const email =
         document
-            .getElementById("contactEmail")
-            .value.trim();
+            .getElementById(
+                "contactEmail"
+            )
+            .value
+            .trim();
 
 
     const message =
         document
-            .getElementById("contactMessage")
-            .value.trim();
+            .getElementById(
+                "contactMessage"
+            )
+            .value
+            .trim();
 
 
     if(
@@ -2983,11 +4392,6 @@ function sendMessage(){
     }
 
 
-    /*
-       Replace this with your backend,
-       email API or WhatsApp integration.
-    */
-
     showToast(
         "Thanks! Your message has been received."
     );
@@ -2995,84 +4399,81 @@ function sendMessage(){
 
     document.getElementById(
         "contactName"
-    ).value="";
+    ).value = "";
 
 
     document.getElementById(
         "contactEmail"
-    ).value="";
+    ).value = "";
 
 
     document.getElementById(
         "contactMessage"
-    ).value="";
+    ).value = "";
 
 }
 
 
-/* =========================================
-   DIRECTIONS
-========================================= */
+/* =====================================================
+   TOAST
+===================================================== */
 
-function openDirections(){
+function showToast(
+    message
+){
 
-    /*
-       CHANGE THIS LOCATION
-       TO YOUR ACTUAL CENTRE.
-    */
+    const toast =
+        document.getElementById(
+            "toast"
+        );
 
-    window.open(
-        "https://www.google.com/maps/dir/?api=1&destination=New+Delhi,India",
-        "_blank"
+
+    toast.innerText =
+        message;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    setTimeout(
+        () => {
+
+            toast.classList.remove(
+                "show"
+            );
+
+        },
+        2500
     );
 
 }
 
 
-/* =========================================
-   TOAST
-========================================= */
-
-function showToast(message){
-
-    const toast =
-        document.getElementById("toast");
-
-
-    toast.innerText=message;
-
-    toast.classList.add("show");
-
-
-    setTimeout(() => {
-
-        toast.classList.remove("show");
-
-    },2500);
-
-}
-
-
-/* =========================================
+/* =====================================================
    INITIALIZE
-========================================= */
+===================================================== */
 
 updateCart();
 
 updateSelectedCount();
 
-loadMenu();
+loadLastOrder();
 
 
-/* =========================================
+/* =====================================================
    ESC KEY
-========================================= */
+===================================================== */
 
 document.addEventListener(
     "keydown",
     function(event){
 
-        if(event.key==="Escape"){
+        if(
+            event.key ===
+            "Escape"
+        ){
 
             closeCart();
 
